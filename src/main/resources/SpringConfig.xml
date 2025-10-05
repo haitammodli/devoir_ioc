@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="cal1" class="dao.CalculV1" primary="true"> </bean>
+
+    <bean id="cal2" class="dao.CalculV2"> </bean>
+
+    <bean id="metier" class="metier.Gestion" primary="true">
+
+        <property name="cal" ref="cal2"> </property>
+    </bean>
+</beans>

@@ -9,6 +9,9 @@ public class Gestion implements IGestion {
     @Autowired
     private ICalcul cal;
 
+    public void setCal(ICalcul cal) {
+        this.cal = cal;
+    }
 
     @Override
     public double calcul() {
